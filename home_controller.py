@@ -28,7 +28,7 @@ class device_handler(debounce_handler):
     """
     TRIGGERS = {DESKTOP_NAME: 52001}
 
-    def act(self, device_name, state):
+    def act(self, client_address, state, device_name):
         print "State", state, "from client for ", device_name
         if device_name == DESKTOP_NAME:
             wol.send_magic_packet('8C:89:A5:11:80:D7')

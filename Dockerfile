@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM hypriot/rpi-python
 
 COPY requirements.txt /
 
@@ -9,5 +9,9 @@ COPY debounce_handler.py /
 # copy in controller
 COPY home_controller.py /
 
+WORKDIR /
 RUN pip install -r requirements.txt
+
+
+EXPOSE 52001
 CMD ["python", "-u", "home_controller.py"]

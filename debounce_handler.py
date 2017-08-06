@@ -19,7 +19,7 @@ class debounce_handler(object):
             return True
         return self.act(client_address, False, name)
 
-    def act(self, client_address, state):
+    def act(self, client_address, state, name):
         pass
 
     def debounce(self):
