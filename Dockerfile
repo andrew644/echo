@@ -1,4 +1,4 @@
-FROM hypriot/rpi-python
+FROM resin/raspberry-pi-python:2.7
 
 COPY requirements.txt /
 
